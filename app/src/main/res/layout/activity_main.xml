@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp"
+    tools:context=".MainActivity" >
+<ScrollView
+    app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="تحديد الورثاء"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/money"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:paddingRight="@dimen/_3sdp"
+            android:id="@+id/money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:hint="ادخل قيمة التركة (القيمة الافتراضية مليون)"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonsLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <LinearLayout
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:padding="1dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/son"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="ابن"
+
+                android:textSize="11sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/daughter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="بنت"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/father"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="أب"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/mother"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="أم"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/hasbend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="زوج"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/brohter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="أخ"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/wife"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+
+                android:text="زوجة"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!-- add 20 more buttons following the same pattern -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:padding="@dimen/_1sdp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/fatherBrother"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="أخ لأب"
+
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/fatherBrotherSon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="ابن الأخ لأب"
+
+                android:textSize="@dimen/_8ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/MotherSons"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="أخوة لأم"
+
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/sister"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="أخت"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/fatherSister"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="أخت لأب"
+
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/uncle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="عم"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:id="@+id/fatherUncle"
+                android:text="عم لأب"
+
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:padding="@dimen/_1sdp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/uncleSon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="ابن العم"
+
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/fatherUncleSon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="ابن العم لأب"
+
+                android:textSize="@dimen/_8ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/sonOfSon"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="ابن الابن"
+
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/sonDaughter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="بنت الابن"
+
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/grandfather"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="جد"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/grandMother"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:text="جدة"
+
+                android:textSize="@dimen/_11ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tst"
+                android:alpha="0.5"
+                android:id="@+id/BrotherSon"
+                android:text="ابن الأخ"
+
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_280sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonsLayout" />
+
+        <TextView
+            android:id="@id/hint"
+            android:layout_marginTop="@dimen/_5sdp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/listView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/calculate"
+    android:hint="اذا أردت حذف فرد من القائمة اسحبه يمينا أو يسارا"
+    android:textSize="@dimen/_8ssp"
+            android:visibility="invisible"
+    />
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="احسب الميراث"
+        android:textSize="@dimen/_15ssp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

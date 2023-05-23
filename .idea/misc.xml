@@ -1,0 +1,27 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/drawable/ic_launcher_background.xml" value="0.151" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/drawable/test.xml" value="0.22" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/drawable/test1.xml" value="0.156" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/drawable/tst.xml" value="0.156" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/activity_main.xml" value="0.14871016691957512" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/activity_results.xml" value="0.49" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/activity_start.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/activity_trans.xml" value="0.1628901239846088" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/item_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/person_layout.xml" value="0.37813884785819796" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/spinner_header.xml" value="0.18911917098445596" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/spinner_item.xml" value="0.16374519025224454" />
+        <entry key="..\:/Users/Mahmoud/AndroidStudioProjects/Inheretance/app/src/main/res/layout/test.xml" value="0.4740740740740741" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

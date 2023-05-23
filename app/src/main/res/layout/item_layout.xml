@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_30sdp"
+    android:paddingLeft="@dimen/_70sdp"
+    >
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="match_parent"
+        android:src="@drawable/son"
+        android:gravity="right"
+        android:padding="@dimen/_1sdp"
+
+        />
+
+    <TextView
+
+        android:id="@+id/person"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:text="ابن"
+        android:textSize="@dimen/_20ssp" />
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    >
+
+    <TextView
+        android:id="@+id/fraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="left"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textSize="@dimen/_12ssp"
+        android:text="الباقي تعصيبا" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="@dimen/_12ssp"
+       android:layout_marginRight="@dimen/_10sdp"
+        android:gravity="right"
+        android:text="الفرض" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:text="24"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12ssp"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="النصيب" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <TextView
+            android:id="@+id/hundred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="24 %"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12ssp"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="النسبة المئوية" />
+    </LinearLayout>
+</LinearLayout>
